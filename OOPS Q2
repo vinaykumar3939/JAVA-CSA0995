@@ -1,0 +1,60 @@
+class Dog {
+    
+    private String name;
+    private int age;
+
+    
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+     
+        Dog dog1 = new Dog("Buddy", 2);
+        Dog dog2 = new Dog("Max", 3);
+
+
+        System.out.println("Initial values:");
+        printDogDetails(dog1);
+        printDogDetails(dog2);
+
+    
+        dog1.setName("Charlie");
+        dog1.setAge(4);
+
+        dog2.setName("Lucy");
+        dog2.setAge(5);
+
+        System.out.println("\nUpdated values:");
+        printDogDetails(dog1);
+        printDogDetails(dog2);
+    }
+
+
+    private static void printDogDetails(Dog dog) {
+        System.out.println("Dog Name: " + dog.getName());
+        System.out.println("Dog Age: " + dog.getAge());
+        System.out.println();
+    }
+}
